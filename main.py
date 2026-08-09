@@ -1,9 +1,17 @@
-item = input("Enter your item name : ")
-amount =float(input("Enter price of item : "))
 
+expenses = []
+for i in range(3):
+    item = input("enter item name:")
+    amount = float(input("enter price of this item :"))
+    
+    expenses.append([item, amount])
+ 
 print("=====Expense Added=====")
 
-print(f"Item : {item}")
-print(f"Amount : {amount}")
+for expense in expenses:
+    print(expense[0], expense[1])
 
-print(f"you spent {amount} rupees on {item}")
+total = 0
+for expense in expenses:
+    total = total + expense[1]
+print(total)
